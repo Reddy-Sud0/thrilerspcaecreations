@@ -3,53 +3,53 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Lightbulb, Cog, Wrench, Building, Users } from 'lucide-react';
 
+const services = [
+  {
+    id: 'conceptualization',
+    title: 'Conceptualization',
+    subtitle: 'Where Dreams Take Shape',
+    content: 'Our concept development for any Theme Park, Water Park, Resort, or Family Entertainment Center (FEC) generally begins with a site visit and an initial meeting to discuss the client\'s vision for the new leisure attraction. Conceptually, the design effort begins with a blank page. The greatest opportunity occurs when unique aspects of the project can be effectively integrated with the proven experience of comparable attractions for this particular location. The resulting plan is generally the strongest tool in financing and operational efforts.',
+    icon: Lightbulb,
+    color: 'from-blue-500 to-cyan-500'
+  },
+  {
+    id: 'design',
+    title: 'Design for Manufacture',
+    subtitle: 'Precision Meets Innovation',
+    content: 'Through Design for Manufacturing (DFM), we optimize a part, product, or component\'s design to create it more affordably and efficiently. Our DFM process involves efficiently designing or engineering an object — generally during the product design stage, when it is easier and less expensive to do so — in order to reduce manufacturing costs. This allows us to identify and prevent mistakes or discrepancies before they occur.',
+    icon: Cog,
+    color: 'from-green-500 to-emerald-500'
+  },
+  {
+    id: 'manufacture',
+    title: 'Manufacture & Operations',
+    subtitle: 'Complete Turnkey Solutions',
+    content: 'We manufacture the equipment to the best standards available in the market, test them for quality, install the equipment, commission them, and also partake in their operations. As professional manufacturers and operators in the industry, we provide turnkey solutions. As per customer requirements, we also offer maintenance support through Annual Maintenance Contracts (AMCs).',
+    icon: Wrench,
+    color: 'from-orange-500 to-red-500'
+  },
+  {
+    id: 'amusement',
+    title: 'For Amusement Parks',
+    subtitle: 'Temporary Thrills, Lasting Memories',
+    content: 'Fresh thrill formats that don\'t need a permanent build. Perfect for events, festivals, and temporary installations that deliver maximum excitement.',
+    icon: Building,
+    color: 'from-yellow-500 to-orange-500'
+  },
+  {
+    id: 'custom',
+    title: 'For Custom Install Clients',
+    subtitle: 'Permanent Magic Solutions',
+    content: 'Built-on-site zones designed for long-term magic. Custom installations that become permanent fixtures of wonder and excitement.',
+    icon: Users,
+    color: 'from-indigo-500 to-purple-500'
+  }
+];
+
 const OurServicesSection = () => {
   const [activeSection, setActiveSection] = useState(0);
   const navRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const navContainerRef = useRef<HTMLDivElement | null>(null);
-
-  const services = [
-    {
-      id: 'conceptualization',
-      title: 'Conceptualization',
-      subtitle: 'Where Dreams Take Shape',
-      content: 'Our concept development for any Theme Park, Water Park, Resort, or Family Entertainment Center (FEC) generally begins with a site visit and an initial meeting to discuss the client\'s vision for the new leisure attraction. Conceptually, the design effort begins with a blank page. The greatest opportunity occurs when unique aspects of the project can be effectively integrated with the proven experience of comparable attractions for this particular location. The resulting plan is generally the strongest tool in financing and operational efforts.',
-      icon: Lightbulb,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      id: 'design',
-      title: 'Design for Manufacture',
-      subtitle: 'Precision Meets Innovation',
-      content: 'Through Design for Manufacturing (DFM), we optimize a part, product, or component\'s design to create it more affordably and efficiently. Our DFM process involves efficiently designing or engineering an object — generally during the product design stage, when it is easier and less expensive to do so — in order to reduce manufacturing costs. This allows us to identify and prevent mistakes or discrepancies before they occur.',
-      icon: Cog,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 'manufacture',
-      title: 'Manufacture & Operations',
-      subtitle: 'Complete Turnkey Solutions',
-      content: 'We manufacture the equipment to the best standards available in the market, test them for quality, install the equipment, commission them, and also partake in their operations. As professional manufacturers and operators in the industry, we provide turnkey solutions. As per customer requirements, we also offer maintenance support through Annual Maintenance Contracts (AMCs).',
-      icon: Wrench,
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      id: 'amusement',
-      title: 'For Amusement Parks',
-      subtitle: 'Temporary Thrills, Lasting Memories',
-      content: 'Fresh thrill formats that don\'t need a permanent build. Perfect for events, festivals, and temporary installations that deliver maximum excitement.',
-      icon: Building,
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      id: 'custom',
-      title: 'For Custom Install Clients',
-      subtitle: 'Permanent Magic Solutions',
-      content: 'Built-on-site zones designed for long-term magic. Custom installations that become permanent fixtures of wonder and excitement.',
-      icon: Users,
-      color: 'from-indigo-500 to-purple-500'
-    }
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,9 +74,9 @@ const OurServicesSection = () => {
   }, []);
 
   useEffect(() => {
-    if (navRefs.current[activeSection] && navContainerRef.current) {
-      const navItem = navRefs.current[activeSection];
-      const container = navContainerRef.current;
+    const navItem = navRefs.current[activeSection];
+    const container = navContainerRef.current;
+    if (navItem && container) {
       const offset = navItem.offsetTop - container.offsetHeight / 2 + navItem.offsetHeight / 2;
       container.scrollTo({ top: offset, behavior: 'smooth' });
     }
@@ -90,8 +90,8 @@ const OurServicesSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 px-4 md:px-8">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-10 px-4 md:px-8">
+      <div className="container mx-auto px-4 py-10">
         {/* Centered Main Heading */}
         <div className="text-center mb-16">
           <h1 className="text-3xl lg:text-6xl font-extrabold  bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent text-center mb-4 ">
@@ -143,7 +143,7 @@ const OurServicesSection = () => {
                 <div
                   key={service.id}
                   id={`service-${index}`}
-                  className="min-h-screen flex items-center justify-center"
+                  className="py-12 flex items-center justify-center"
                 >
                   <div className="max-w-2xl w-full">
                     <div className="flex items-center space-x-4 mb-4">

@@ -22,11 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${orbitron.className} ${orbitron.variable}`}>
+      <body className={`${orbitron.className} ${orbitron.variable} flex flex-col min-h-screen`}>
         <Header />
-        
+        <main className="flex-1">
           {children}
-        <Footer/>
+        </main>
+        <Footer />
       </body>
     </html>
   );

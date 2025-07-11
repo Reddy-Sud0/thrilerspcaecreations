@@ -59,7 +59,7 @@ const Footer = () => {
 
 
   return (
-    <footer className="relative bg-gradient-to-b from-slate-900 to-black overflow-hidden">
+    <footer className="relative z-0 bg-gradient-to-b from-slate-900 to-black overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {/* Particle streams */}
@@ -98,9 +98,9 @@ const Footer = () => {
 
       <div className="relative z-10">
         {/* Main Footer Content */}
-        <div className="container mx-auto px-6 py-16">
+        <div className="container mx-auto px-6 py-8">
           {/* Top Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-6">
             {/* Company Info */}
             <motion.div
               className="lg:col-span-1"

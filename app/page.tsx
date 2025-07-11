@@ -8,12 +8,17 @@ import WhatWeOfferSection from "@/components/WhatWeOfferSection";
 import OurServicesSection from "@/components/OurServicesSection";
 import WhoWeServeSection from "@/components/WhoWeServeSection";
 import TrustedByLeaders from "@/components/TrustedByLeaders";
+import BookCallSection from "@/components/BookCallSection";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
       <HeroSection />
+
+     
       
       {/* Trusted Brands Section */}
       <TrustedBrands />
@@ -37,7 +42,13 @@ export default function HomePage() {
       {/* Trusted By Leaders Section */}
       <TrustedByLeaders />
 
-      
+       {/* Book Call Section */}
+       <BookCallSection />
+
+       {/* FAQ Section */}
+       
+         <FAQSection />
+       
 
       
     </>
