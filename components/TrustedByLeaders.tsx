@@ -37,15 +37,15 @@ export default function TrustedByLeaders() {
   }, []);
 
   return (
-    <section className="py-20">
+    <section className="py-16">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl md:text-6xl font-extrabold text-black  text-center drop-shadow-lg mb-4">
+        <h2 className="text-3xl md:text-6xl font-extrabold text-black  text-center drop-shadow-lg mb-10">
           Trusted by Leaders
         </h2>
-        <div className="flex flex-col md:flex-row md:space-x-8 space-y-10 md:space-y-0 justify-center items-stretch">
+        <div className="flex flex-col md:flex-row md:space-x-10 space-y-10 md:space-y-0 justify-center items-stretch">
           {testimonials.map((t, i) => (
             <blockquote key={i} className="flex-1 flex flex-col items-center">
-              <div className="mb-8 flex justify-center" style={{ minHeight: 64 }}>
+              <div className="mb-10 flex justify-center" style={{ minHeight: 64 }}>
                 <img
                   ref={el => (logoRefs.current[i] = el)}
                   src={t.logo}

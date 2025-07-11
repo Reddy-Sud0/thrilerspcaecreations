@@ -8,7 +8,7 @@ const logos = [
 ];
 
 const TrustedBrands: React.FC = () => (
-  <section className="w-full py-10 bg-gradient-to-br from-black via-[#0b0c2a] to-[#060618] flex flex-col items-center">
+  <section className="relative py-16 px-4 md:px-8 bg-gradient-to-br from-black via-[#0b0c2a] to-[#060618] overflow-hidden flex flex-col items-center">
     <h1 className="text-3xl md:text-6xl font-extrabold text-white leading-tight text-center drop-shadow-lg mb-12">
       Trusted by <span className="text-white">World’s Most Loved Brands</span>
     </h1>

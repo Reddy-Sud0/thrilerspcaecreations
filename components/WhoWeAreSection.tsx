@@ -40,7 +40,7 @@ export default function WhoWeAreSection() {
   }, []);
 
   return (
-    <section className="relative py-20 px-4 md:px-8 bg-gradient-to-br from-white via-gray-50 to-gray-100 overflow-hidden">
+    <section className="relative py-16 px-4 md:px-8 bg-gradient-to-br from-white via-gray-50 to-gray-100 overflow-hidden">
       {/* Decorative background shapes */}
       <div className="absolute -top-16 -left-16 w-72 h-72 bg-purple-100 rounded-full opacity-30 blur-2xl z-0" />
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-indigo-100 rounded-full opacity-20 blur-2xl z-0" />

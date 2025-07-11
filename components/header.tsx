@@ -333,7 +333,7 @@ export default function Header() {
                     </button>
                     <div
                       id={`mobile-submenu-${item.name}`}
-                      className={`overflow-hidden transition-all duration-300 ${mobileSubmenuOpen === item.name ? 'max-h-[1000px] opacity-100 mt-2' : 'max-h-0 opacity-0'} bg-gradient-to-br from-[#181a2a] to-[#1a1333] rounded-2xl border border-white/10 shadow-lg backdrop-blur-md`}
+                      className={`overflow-hidden transition-all duration-300 ${mobileSubmenuOpen === item.name ? 'max-h-[1000px] opacity-100 mt-2' : 'max-h-0 opacity-0'} bg-gradient-to-br from-[#181a2a] to-[#1a1333] rounded-2xl border border-white/10 shadow-lg backdrop-blur-md ${mobileSubmenuOpen === item.name ? 'max-h-[60vh] overflow-y-auto' : ''}`}
                       style={{ pointerEvents: mobileSubmenuOpen === item.name ? 'auto' : 'none' }}
                     >
                       <div className="flex flex-col gap-3 p-3">

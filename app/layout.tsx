@@ -1,14 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Orbitron } from 'next/font/google';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-
-const inter = Inter({ subsets: ['latin'] });
-const orbitron = Orbitron({ 
-  subsets: ['latin'],
-  variable: '--font-orbitron'
-});
 
 export const metadata: Metadata = {
   title: 'ThrillscapeCreation - Amusement Parks & Entertainment Solutions',
@@ -22,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${orbitron.className} ${orbitron.variable} flex flex-col min-h-screen`}>
+      <body className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-1">
           {children}

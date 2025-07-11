@@ -108,7 +108,7 @@ const WhoWeServeSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-20 px-4 sm:px-8 bg-gradient-to-br from-white via-blue-50 to-blue-100 overflow-hidden">
+    <section ref={sectionRef} className="relative py-16 px-4 sm:px-8 bg-gradient-to-br from-white via-blue-50 to-blue-100 overflow-hidden">
       {/* Decorative background shapes */}
       <div className="absolute inset-0 pointer-events-none">
         <svg className="absolute top-0 left-0 w-64 h-64 opacity-10" viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="100" fill="#3b82f6" /></svg>

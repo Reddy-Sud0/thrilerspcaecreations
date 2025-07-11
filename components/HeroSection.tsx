@@ -53,7 +53,7 @@ function HeroSection({
   }, []);
 
   return (
-    <section className="relative flex items-center justify-center w-full px-2 md:px-0 h-screen md:pt-[96px] md:h-[calc(600px+96px)]">
+    <section className="relative flex items-start md:items-center justify-center w-full px-2 md:px-0 min-h-screen pt-[96px] md:pt-[96px] md:h-[calc(600px+96px)]">
       <div className="absolute inset-0">
         <video
           src={videoSrc}
@@ -66,7 +66,7 @@ function HeroSection({
         <div className="absolute inset-0 bg-black/50" />
       </div>
       <div className="container relative z-10 text-center text-white hero-content flex flex-col items-center justify-center h-full px-2 md:px-0 md:-translate-y-16">
-        <h1 className="text-3xl md:text-6xl font-extrabold text-white leading-tight text-center drop-shadow-lg mb-3 md:mb-6  max-w-[90vw] md:max-w-[90vw]">
+        <h1 className="text-2xl md:text-6xl font-extrabold text-white leading-tight text-center drop-shadow-lg mb-3 md:mb-6  max-w-[90vw] md:max-w-[90vw]">
           {headline.split("").map((char, i) => (
             <span
               key={i}
